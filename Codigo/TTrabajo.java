@@ -1,7 +1,7 @@
 import java.util.Vector;
 import java.util.Date;
 
-public class TTrabajo {
+public class TTrabajo implements TRecurso {
   /* {src_lang=Java}*/
 
 
@@ -34,10 +34,10 @@ public class TTrabajo {
   return null;
   }
 
-  public void anadirRecurso(TRecurso recurso) {
+  public void anadirRecurso( recurso) {
   }
 
-  public void eliminarRecurso(TRecurso recurso) {
+  public void eliminarRecurso( recurso) {
   }
 
 }
