@@ -42,17 +42,9 @@ public class frmLogin extends javax.swing.JFrame {
 
         lblPassword.setText("Password");
 
-        txtUsuario.setBackground(java.awt.Color.white);
-
-        txtPassword.setBackground(java.awt.Color.white);
         txtPassword.setColumns(10);
 
         btnEntrar.setText("Entrar");
-        btnEntrar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEntrarActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -93,22 +85,14 @@ public class frmLogin extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-        //Datos usuario/pass fijos. Hay que tratarlos con la BBDD
-        String usuarioOK="admin";
-        String passwordOK="admin";
-        String usuario=txtUsuario.getText();
-        String password=new String(txtPassword.getPassword());
-        if(usuarioOK.equals(usuario) && passwordOK.equals(password)){
-            frmPrincipal UI = new frmPrincipal();
-            UI.setVisible(true);
-            dispose();
-        }
-        else
-            JOptionPane.showMessageDialog(this, "Usuario/password incorrectos");
-    }//GEN-LAST:event_btnEntrarActionPerformed
-
+    public String getLogin(){
+        return this.txtUsuario.getText();
+    }
+    public String getPassword(){
+        String pass = new String(txtPassword.getPassword());
+        return pass;
+    }
+    
     /**
      * @param args the command line arguments
      */

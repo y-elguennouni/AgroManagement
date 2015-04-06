@@ -15,17 +15,20 @@ public class TUsuario {
     private String usuario;
     private String password;
     
+    public String getUsuario(){
+        return this.usuario;
+    }
+    public String getPassword(){
+        return this.password;
+    }
+    public void setUsuario(String usuario){
+        this.usuario=usuario;
+    }
+    public void setPassword(String password){
+        this.password=password;
+    }
     public TUsuario(String usuario, String password){
         this.usuario=usuario;
         this.password=password;
-    }
-    public boolean existe(){
-        if (this.usuario.equals("admin"))
-            return true;
-        else
-            return false;               
-    }
-    public void salvar(){
-        
     }
 }

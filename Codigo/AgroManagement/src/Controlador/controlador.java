@@ -5,21 +5,18 @@
  */
 package Controlador;
 
-import Modelo.TUsuario;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import Vista.vista;
 
 
 /**
  *
  * @author platon
  */
-public class controlador {
-    
-    public void CrearUsuario(String usuario, String password,String confirmar){
-        TUsuario objUsuario = new TUsuario(usuario,password);
-        if (!usuario.isEmpty() && password.equals(confirmar))
-            if (!objUsuario.existe())
-                objUsuario.salvar();
-      
-
+public class controlador{
+    private vista vista;
+    private void btnEntrarActionPerformed(ActionEvent evt) {
+        System.out.println("Evento Recibido");
     }
 }

@@ -75,18 +75,8 @@ public class frmPrincipal extends javax.swing.JFrame {
         txtConfirmar.setColumns(10);
 
         btnCrearUsuario.setText("Crear");
-        btnCrearUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCrearUsuarioActionPerformed(evt);
-            }
-        });
 
         btnCancelar.setText("Cancelar");
-        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelarActionPerformed(evt);
-            }
-        });
 
         javax.swing.GroupLayout diagCrearUsuarioLayout = new javax.swing.GroupLayout(diagCrearUsuario.getContentPane());
         diagCrearUsuario.getContentPane().setLayout(diagCrearUsuarioLayout);
@@ -143,11 +133,6 @@ public class frmPrincipal extends javax.swing.JFrame {
         menuFincas.setText("Fincas");
 
         itCrearFinca.setText("Crear");
-        itCrearFinca.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                itCrearFincaActionPerformed(evt);
-            }
-        });
         menuFincas.add(itCrearFinca);
 
         itVerFinca.setText("Ver");
@@ -225,31 +210,6 @@ public class frmPrincipal extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void itCrearFincaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itCrearFincaActionPerformed
-        // TODO add your handling code here:
-        diagCrearUsuario.setLocationRelativeTo(null);
-        //La hacemos modal
-        diagCrearUsuario.setModal(true);
-        //Establecemos un título para el jDialog
-        diagCrearUsuario.setTitle("CREAR USUARIO");
-        //La hacemos visible.
-        diagCrearUsuario.setVisible(true);
-    }//GEN-LAST:event_itCrearFincaActionPerformed
-
-    private void btnCrearUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearUsuarioActionPerformed
-        // TODO add your handling code here:
-        controlador cont = new controlador();
-        String usuario = txtUsuario.getText();
-        String password= new String(txtPassword.getPassword());
-        String confirmar = new String(txtPassword.getPassword());
-        cont.CrearUsuario(usuario,password,confirmar);
-    }//GEN-LAST:event_btnCrearUsuarioActionPerformed
-
-    private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
-        // TODO add your handling code here:
-        diagCrearUsuario.setVisible(false);
-    }//GEN-LAST:event_btnCancelarActionPerformed
 
     /**
      * @param args the command line arguments
