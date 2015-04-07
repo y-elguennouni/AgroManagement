@@ -9,10 +9,10 @@ package Vista;
  *
  * @author platon
  */
-public class vista {
+public class Vista {
     private frmLogin frmLogin;
     private frmPrincipal frmPrincipal;
-    public vista(){
+    public Vista(){
         this.frmLogin=new frmLogin();
     }
     public void setVisibleLogin(boolean visible){

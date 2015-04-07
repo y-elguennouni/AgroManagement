@@ -5,30 +5,38 @@
  */
 package Modelo;
 
-import javax.swing.JOptionPane;
-
 /**
  *
  * @author platon
  */
-public class TUsuario {
+public class Usuario {
     private String usuario;
     private String password;
-    
+    private boolean admin;
+    //getters
     public String getUsuario(){
         return this.usuario;
     }
     public String getPassword(){
         return this.password;
     }
+    public boolean getAdmin(){
+        return this.admin;
+    }
+    //Setters
     public void setUsuario(String usuario){
         this.usuario=usuario;
     }
     public void setPassword(String password){
         this.password=password;
     }
-    public TUsuario(String usuario, String password){
+    public void setAdmin(boolean admin){
+        this.admin=admin;
+    }
+    //Constructor
+    public Usuario(String usuario, String password, boolean admin){
         this.usuario=usuario;
         this.password=password;
+        this.admin=admin;
     }
 }

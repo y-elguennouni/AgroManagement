@@ -5,7 +5,7 @@
  */
 package Vista;
 
-import Controlador.controlador;
+import Controlador.Controlador;
 
 /**
  *
