@@ -35,4 +35,10 @@ public class ListaUsuarios {
             i++;
         usuarios.set(i, usuario);
         }
+    public void delUsuario(String usuario){
+        int i=0;
+        while(!usuarios.get(i).getUsuario().equals(usuario))
+            i++;
+        usuarios.remove(i);
+    }
 }
