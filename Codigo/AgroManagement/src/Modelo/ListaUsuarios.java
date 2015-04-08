@@ -17,8 +17,11 @@ public class ListaUsuarios {
     public ListaUsuarios(){
         this.usuarios=new ArrayList();
     }
-    public void addUsuario(Usuario usuario){
-        usuarios.add(usuario);
+    public void addUsuario(String usuario,String password,boolean admin){
+        Usuario aux = new Usuario(usuario,password,admin);
+        if(!existeUsuario(usuario))
+            usuarios.add(aux);
+        //Aqui iria un else con la excepcion
     }
     public Usuario getUsuario(String usuario){
         int i;
@@ -28,17 +31,32 @@ public class ListaUsuarios {
         }
         return null;
     }
-    public void setUsuario(Usuario usuario){
+    public void setUsuario(String usuario, String password, boolean admin){
         int i=0;
+        Usuario aux=new Usuario(usuario,password,admin);
         //mientras nolo encuentra avanza
-        while (!usuarios.get(i).getUsuario().equals(usuario.getUsuario()))
+        while (!usuarios.get(i).getUsuario().equals(usuario) || i<usuarios.size())
             i++;
-        usuarios.set(i, usuario);
-        }
+        if(i<usuarios.size())
+            usuarios.set(i, aux);
+        //Aqui va excepcion de no encontrado
+    }
     public void delUsuario(String usuario){
         int i=0;
-        while(!usuarios.get(i).getUsuario().equals(usuario))
+        while(!usuarios.get(i).getUsuario().equals(usuario)|| i<usuarios.size())
             i++;
-        usuarios.remove(i);
+        if(i<usuarios.size())
+            usuarios.remove(i);
+        //Aqui va excepcion de no controlado
+    }
+    //Funciones auxiliares
+    private boolean existeUsuario(String usuario){
+        int i;
+        boolean encontrado=false;
+        for(i=0;i<usuarios.size();i++){
+            if(usuarios.get(i).getUsuario().equals(usuario))
+                encontrado=true;
+        }
+        return encontrado;
     }
 }

@@ -20,4 +20,23 @@ public class Modelo {
         listaRecursos=new ListaRecursos();
         listaFincas=new ListaFincas();
     }
+    //Usuario
+    public void crearUsuario(String usuario,String password, boolean admin){
+        listaUsuarios.addUsuario(usuario,password,admin);
+    }
+    public void modificarUsuario(String usuario,String password, boolean admin){
+        listaUsuarios.setUsuario(usuario,password,admin);
+    }
+    public void borrarUsuario(String usuario){
+        listaUsuarios.delUsuario(usuario);
+    }
+    public void verUsuarioUsuario(String usuario){
+        
+    }
+    public void verUsuarioPassword(String usuario){
+        
+    }
+    public void verUsuarioAdmin(String usuario){
+        
+    }
 }
