@@ -11,7 +11,7 @@ import Vista.Vista;
 
 /**
  *
- * @author platon
+ * @author platon s
  */
 public class Controlador{
     private Vista vista;
